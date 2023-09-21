@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.punkpanda.mystudyguide.MainFragment"
+        android:label="Main Fragment">
+        <!-- Define any arguments if needed -->
+        <action
+            android:id="@+id/action_main_to_create"
+            app:destination="@id/createFlashcardActivity" />
+        <action
+            android:id="@+id/action_main_to_quiz"
+            app:destination="@id/quizActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/createFlashcardActivity"
+        android:name="com.punkpanda.mystudyguide.CreateFlashcardActivity">
+        <!-- Define any arguments if needed -->
+    </activity>
+
+    <activity
+        android:id="@+id/quizActivity"
+        android:name="com.punkpanda.mystudyguide.QuizActivity">
+        <!-- Define any arguments if needed -->
+    </activity>
+
+</navigation>
